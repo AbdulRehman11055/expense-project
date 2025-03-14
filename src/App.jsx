@@ -24,7 +24,7 @@ function App() {
         setLocalData((prevState)=>[...prevState,4,5,6])
       }}>Track Your Expense</h1> */}
       {/* <h1>{localData}</h1> */}
-      <h1>Track Your Expense</h1>
+      <h1>Track Your Daily Expense</h1>
       <div className="expense-tracker">
         <ExpenseForm setExpenses={setExpense} expensee={expensee} setExpensee={setExpensee} editingRowId={editingRowId} setEditingRowId={setEditingRowId}/>
         <ExpenseTable expenses={expense} setExpensee={setExpensee} setExpense={setExpense} setEditingRowId={setEditingRowId}/>
