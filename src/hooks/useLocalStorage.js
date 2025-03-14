@@ -13,8 +13,10 @@ export function useLocalStorage(key,initialData){
    const updateLocalStorage=(newData)=>{
     if(typeof newData === "function"){
         localStorage.setItem(key,JSON.stringify(newData(data)))
+    }else{
+        localStorage.setItem(key,JSON.stringify(newData))
     }
-    localStorage.setItem(key,JSON.stringify(newData))
+    
     setData(newData)
    }
    return[data,updateLocalStorage]
