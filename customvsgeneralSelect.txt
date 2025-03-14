@@ -1,0 +1,21 @@
+<div className="input-container">
+            <label htmlFor="category">Category</label>
+            <select id="category" name='category'
+            //2nd method using individual usestate hook  
+            //value={category}
+            //onChange={(e)=>setCategory(e.target.value)}
+            //3rd method using useref Hook
+            // ref={categoryRef}
+            //4th method using combined usestate hook
+            value={expense.category}
+            onChange={handleChange}
+              >
+                  <option hidden>Select Category</option>
+                  <option value="grocery">Grocery</option>
+                  <option value="clothes">Clothes</option>
+                  <option value="bills">Bills</option>
+                  <option value="education">Education</option>
+                  <option value="medicine">Medicine</option>
+                </select>
+                <p className='error'>{error.category}</p>
+</div>

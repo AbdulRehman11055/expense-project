@@ -1,0 +1,24 @@
+use this
+<Input 
+          label="Title"
+          id="title"
+          name="title"
+          value={expense.title}
+          onChange={handleChange}
+          error={error.title}
+/>
+instead of this
+<div className="input-container">
+            <label htmlFor="title">Title</label>
+            <input id="title" name='title'
+            //2nd method using individual usestate hook 
+            // value={title}
+            // onChange={(e)=>setTitle(e.target.value)}
+            //3rd method using useref Hook
+            // ref={titleRef}
+            //4th method using combined usestate hook
+            value={expense.title}
+            onChange={handleChange}
+              />
+              <p className='error'>{error.title}</p>
+</div>

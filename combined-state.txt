@@ -1,0 +1,32 @@
+const [expense, setExpense] = useState({
+    title: '',
+    category: '',
+    amount: '',
+  })
+
+setExpenses((prevState) => [
+      ...prevState,
+      { ...expense, id: crypto.randomUUID() },
+    ])
+    setExpense({
+      title: '',
+      category: '',
+      amount: '',
+    })
+
+    value={expense.title}
+
+    onChange={(e) =>
+            setExpense((prevState) => ({ ...prevState, title: e.target.value }))
+          }
+same as above in amount and category case
+          
+         
+const handleChange=(e)=>{
+    const {name,value}=e.target
+    setExpense((prevState)=>({
+        ...prevState,
+        [name]:value,
+    }))
+}
+above code mai hum har input or select ke keys ko name attribute/prop sy get kr user k through anay wali values ko assign kr rhy hain
