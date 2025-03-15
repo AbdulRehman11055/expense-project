@@ -40,7 +40,7 @@ export function useLocalStorage(key, initialData) {
       // In case JSON.parse fails, we can just use the initialData
       setData(initialData);
     }
-  }, [key, initialData]);
+  }, []);// Empty dependency array ensures this runs only once on mount
 
   const updateLocalStorage = (newData) => {
     try {
